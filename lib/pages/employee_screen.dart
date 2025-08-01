@@ -8,7 +8,12 @@ class EmployeeScreen extends StatefulWidget {
 }
 
 class _EmployeeScreenState extends State<EmployeeScreen> {
-  T
+
+  List<TextEditingController> nameControllers = [TextEditingController()];
+  TextEditingController surnameController =  TextEditingController();
+  TextEditingController ageController =  TextEditingController();
+  TextEditingController locationController =  TextEditingController();
+  TextEditingController emailController =  TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,8 +35,10 @@ class _EmployeeScreenState extends State<EmployeeScreen> {
         
         margin: EdgeInsets.only(left: 20,top: 30.0,right: 20),
         child: ListView(
-        
+         
+       
           children: [
+            
             Text('Name',style: TextStyle(color: Colors.black,fontSize: 18,fontWeight: FontWeight.bold),),
             SizedBox(height: 5,),
             Container(
